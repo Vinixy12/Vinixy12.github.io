@@ -1,1 +1,1 @@
-# Vinixy12.github.io
+# vinixy12.github.io
