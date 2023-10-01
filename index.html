@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Menu de Jogos</title>
+</head>
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:300&subset=latin-ext);
+
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -ms-flex-direction: column;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-font-smoothing: antialiased;
+        background: #669afc;
+        color: #777;
+        display: flex;
+        flex-direction: column;
+        font-family: Montserrat, sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        margin: 0;
+        min-height: 100vh;
+        padding: 5%;
+    }
+
+    h1 {
+        font-weight: 200;
+        font-size: 2.2rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    nav {
+        margin: 0 auto;
+        width: 925px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 0px 0px 10px 10px;
+        background: #008FEA;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+    }
+
+    nav::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        float: left;
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        color: rgba(255, 255, 255, .9);
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-radius: 15px;
+        transition: all .3s ease-in-out;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+        background: rgba(0, 0, 0, .15);
+    }
+
+    nav ul li a:focus {
+        color: white;
+    }
+
+    nav ul li a:not(:only-child)::after {
+        padding-left: 4px;
+        content: ' ▾';
+    }
+
+    nav ul li ul li {
+        min-width: 190px;
+    }
+
+    nav ul li ul li a {
+        background: transparent;
+        color: #fff;
+        border-bottom: 0.5px solid #DDE0E7;
+    }
+
+    nav ul li ul li a:hover,
+    nav ul li ul li a:focus {
+        color: #fff;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        font-weight: bold;
+        text-align: center;
+        margin: 0px 25px;
+        border-radius: 10px;
+        color: #fff;
+        background: #008FEA;
+        box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+    }
+
+    .dropdown li:hover {
+        background: #0070b6;
+        border-radius: 10px;
+
+    }
+
+    #menu {
+        width: 750px;
+        padding: 90px 0px;
+
+    }
+
+    #quiz {
+        width: 900px;
+
+    }
+
+    footer {
+        color: #fff;
+        font-size: 12px;
+        margin: 70px 0 0 0;
+        text-align: center;
+    }
+
+    footer a {
+        color: rgba(213, 220, 226, 0.863);
+        text-decoration: none;
+    }
+
+    #id {
+        display: flex;
+        position: center;
+    }
+
+    #desenvolvedores{
+        padding: 0 0;
+        max-height: 880px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+    }
+</style>
+
+<body>
+
+    <nav class="nav">
+        <nav class="navbar fixed-top">
+                <ul>
+                    <h1><a href="#menu">Menu de Jogos</a></h1>
+                    <li><a href="#quiz">Quiz</a>
+                    <li><a href="#adivinhe_imagem">Adivinhe a imagem</a>
+                    <li class="drop"><a href="#adivinhe_numero">Adivinhe o número</a>
+                        <ul class="dropdown">
+                            <li><a href="#numero_facil">Fácil</a></li>
+                            <li><a href="#numero_medio">Médio</a></li>
+                            <li><a href="#numero_intermediario">Intermediário</a></li>
+                            <li><a href="#numero_dificil">Difícil</a></li>
+                            <li><a href="#1ao31">1 ao 31</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#tibetano">Tibetano</a>
+                    <li><a href="#desenvolvedores">Desenvolvedores</a>
+
+                </ul>
+        </nav>
+    </nav>
+
+
+    <img src="imagem/Em Desenvolvimento.png" class="img-fluid rounded" id="menu">
+
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/quiz.jpg" class="img-fluid rounded" id="quiz">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/desenvolvimento.jpg" class="img-fluid rounded" id="adivinhe_imagem">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/numero_facil.jpg" class="img-fluid rounded" id="numero_facil">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/numero_medio.jpg" class="img-fluid rounded" id="numero_medio">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/numero_intermediario.jpg" class="img-fluid rounded" id="numero_intermediario">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/numero_dificil.jpg" class="img-fluid rounded" id="numero_dificil">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/1ao31.jpg" class="img-fluid rounded" id="1ao31">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="card">
+        <img src="imagem/tibetano.jpg" class="img-fluid rounded" id="tibetano">
+    </div>
+
+    <div class="card">
+        <img src="imagem/desenvolvedores.jpg" class="img-fluid rounded" id="desenvolvedores">
+        <br><br>
+        <span style="text-align: center; color: white; font-weight: bold;">Vinicius Ribeiro Lopes e Gustavo Félix da Silva Camargo</span>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <footer>
+        <p class="main" style="font-weight: bold;">
+            Menu de Jogos | Desenvolvido por <a href="#desenvolvedores">Gustavo e Vinícius</a>
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
