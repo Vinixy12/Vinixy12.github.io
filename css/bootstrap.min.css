@@ -56,7 +56,6 @@ footer,
 header,
 hgroup,
 main,
-nav,
 section {
     display: block
 }
@@ -69,7 +68,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background-color: #85aefa;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -167,13 +166,13 @@ sup {
 }
 
 a {
-    color: #fff;
+    color: #007bff;
     text-decoration: none;
     background-color: transparent
 }
 
 a:hover {
-    color: whitesmoke;
+    color: #0056b3;
     text-decoration: underline
 }
 
@@ -501,19 +500,13 @@ mark {
 }
 
 .img-fluid {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    max-width: 80%;
-    height: 80%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    max-width: 100%;
+    height: auto
 }
 
 .img-thumbnail {
     padding: .25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
+    background-color: #669afc;
     border-radius: .25rem;
     max-width: 100%;
     height: auto
@@ -781,15 +774,13 @@ pre code {
 .col-2 {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
-    max-width: 16%
+    max-width: 16.666667%
 }
 
 .col-3 {
-    padding-top: 40%;
-    align-self: center;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    max-width: 25%;
+    max-width: 25%
 }
 
 .col-4 {
@@ -3174,14 +3165,14 @@ fieldset:disabled a.btn {
 
 .btn-dark {
     color: #fff;
-    background-color: #343a40;
-    border-color: #343a40
+    background-color: #357cff;
+    border-color: #357cff;
 }
 
 .btn-dark:hover {
     color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124
+    background-color: #055cff;
+    border-color: #0059ff;
 }
 
 .btn-dark.focus,
@@ -3583,13 +3574,6 @@ input[type=submit].btn-block {
     .collapsing {
         transition: none
     }
-}
-
-.dropdown,
-.dropleft,
-.dropright,
-.dropup {
-    position: relative
 }
 
 .dropdown-toggle {
@@ -4641,15 +4625,6 @@ input[type=submit].btn-block {
     }
 }
 
-.nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none
-}
 
 .nav-link {
     display: block;
@@ -4672,8 +4647,7 @@ input[type=submit].btn-block {
 }
 
 .nav-tabs .nav-item {
-    margin-bottom: -1px;
-    text-align: center
+    margin-bottom: -1px
 }
 
 .nav-tabs .nav-link {
@@ -5184,16 +5158,16 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white
+    color: rgba(255, 255, 255, .5)
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffffff8c
+    color: rgba(255, 255, 255, .75)
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
-    color: rgba(166, 167, 175, 0.637)
+    color: rgba(255, 255, 255, .25)
 }
 
 .navbar-dark .navbar-nav .active>.nav-link,
@@ -5204,7 +5178,7 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-toggler {
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, .5);
     border-color: rgba(255, 255, 255, .1)
 }
 
@@ -5213,7 +5187,7 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-text {
-    color: #fff
+    color: rgba(255, 255, 255, .5)
 }
 
 .navbar-dark .navbar-text a {
@@ -5231,13 +5205,13 @@ input[type=submit].btn-block {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 100%;
-    max-height: 80%;
+    min-width: 0;
     word-wrap: break-word;
     background-color: #669afc;
     background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
-
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.11);
 }
 
 .card>hr {
@@ -5275,7 +5249,9 @@ input[type=submit].btn-block {
 }
 
 .card-title {
-    margin-bottom: .75rem
+    padding-top: 20px;
+    margin-bottom: .75rem;
+    color: #fff;
 }
 
 .card-subtitle {
@@ -7399,7 +7375,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: lightblue !important
+    background-color: #343a40 !important
 }
 
 a.bg-dark:focus,
@@ -8801,6 +8777,13 @@ button.bg-dark:hover {
 }
 
 .fixed-top {
+    max-width: 1280px;
+    margin: 10px auto;
+    padding: 5px;
+    background: #008FEA;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.11);
     position: fixed;
     top: 0;
     right: 0;

@@ -1,0 +1,53 @@
+<link rel="shortcut icon" href="/../Menu de Jogos/imagem/logo.png" type="imagem/x-icon">
+
+<script>
+    var num2 = Math.floor(Math.random() * 11)  // numero sorteado
+        num=0;
+        tentativas=0; 
+        // num e numero informado, tentantivas é numero de tentativas
+
+
+    function checaNumero() {
+        //alert('Proceis que num quer jogar, o número é:'+num2)
+        num = prompt("Adivinhe um número entre 1 e 10!");
+        
+        // Usuário cancelou o quiz
+        if(num == null) return false;
+        if(num < 0)
+        {
+          alert('Não coloque números Negativos');
+            
+        }
+        
+        
+        
+        // Usuário não informou um número
+        if(parseInt(num).toString()=='NaN') {
+            alert('Digite um número válido');
+            checaNumero();
+            return false;
+        }
+        
+        tentativas=tentativas+1; // Incrementa as tentativas  tentativas++
+
+        if(parseInt(num) == num2){ // Acertou
+            alert("Parabéns você acertou em " + tentativas + " tentiva(s).");
+        }
+
+        else if(tentativas == 3){
+        alert("Você falhou, tente novamente! (Aperte F5)");
+        }
+
+        else if(parseInt(num) < num2){ // Errou número menor
+            alert("Errou, tente um numero MAIOR.");
+            checaNumero();
+        }
+        else{ //Errou número maior
+            alert("Errou, tente um numero MENOR.");
+            checaNumero();
+        }   
+
+    }
+
+        checaNumero()
+</script>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Adivinhando o quê você pensou !!!!</title>
+    <link rel="shortcut icon" href="/../Menu de Jogos/imagem/logo.png" type="imagem/x-icon">
+</head>
+
+
+<body background="quizz.jpg" text="Darkblue">
+
+    <style>
+        body {
+            background-color: #85aefa;
+            color: #fff;
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+    <script language="Javascript">
+
+
+        alert('Veja a carta a seguir, memorize uma imagem, e espere que vou adivinhar');
+        alert('Só errarei se você não identificar corretamente\n as cartas em que está a imagem que você pensou !!!');
+        alert('Então preste muita atenção ao escolher as cartas !!!');
+        document.write('<center> <h1> Jogo da Adivinhação </h1>');
+        document.write('<form name="formAdivinha" method="get"> ');
+        document.write('<img src="imagens adivinhe imagem/principal.png" border="5" width="740" height="500" title="Role a tela para baixo" />  ');
+        document.write('<br><br><br><br><br><br><h2> Escolha abaixo as cartas em que a linguagem de programação escolhida apareça.</h2><br><br>');
+        document.write('<img src="imagens adivinhe imagem/carta1.png" /> ');
+        document.write('<INPUT TYPE="radio" NAME="op1" VALUE="Sim">Sim ');
+        document.write('<INPUT TYPE="radio" NAME="op1" VALUE="Não" checked>Não<P>');
+        document.write('<img src="imagens adivinhe imagem/carta2.png" /> ');
+        document.write('<INPUT TYPE="radio" NAME="op2" VALUE="Sim">Sim');
+        document.write('<INPUT TYPE="radio" NAME="op2" VALUE="Não" checked>Não<P>');
+        document.write('<img src="imagens adivinhe imagem/carta3.png">  ');
+        document.write('<INPUT TYPE="radio" NAME="op3" VALUE="Sim">Sim');
+        document.write('<INPUT TYPE="radio" NAME="op3" VALUE="Não" checked>Não<P>');
+        document.write('<img src="imagens adivinhe imagem/carta4.png" />  ');
+        document.write('<INPUT TYPE="radio" NAME="op4" VALUE="Sim">Sim');
+        document.write('<INPUT TYPE="radio" NAME="op4" VALUE="Não" checked>Não<P>');
+        document.write('<input type="button" name="verifica" value="Ver o Resultado" onclick="respostas()">');
+        document.write('<input type="reset" name="limpar" value="Limpar Respostas" >');
+        document.write('</form> </center>');
+
+
+        function respostas() {
+
+            var posicao = 0;
+
+            var resp1 = document.formAdivinha.op1.value;
+            var resp2 = document.formAdivinha.op2.value;
+            var resp3 = document.formAdivinha.op3.value;
+            var resp4 = document.formAdivinha.op4.value;
+
+
+            alert('resposta 1 ' + resp1); alert('resposta 2 ' + resp2); alert('resposta 3 ' + resp3); alert('resposta 4 ' + resp4);
+
+
+            if (resp1 == "Sim") posicao = posicao + 1;
+            if (resp2 == "Sim") posicao = posicao + 2;
+            if (resp3 == "Sim") posicao = posicao + 8;
+            if (resp4 == "Sim") posicao = posicao + 4;
+
+
+            if (posicao > 0) {
+                //alert('posicao ='+posicao);
+                document.write('<div style="background-color: #4682B4">');
+                document.write('<center><h2>A imagem que você pensou foi: </h2><br />');
+                if (posicao == 1) document.write('<img src="imagens adivinhe imagem/1.png" width="740" height="500"/> ');
+                if (posicao == 2) document.write('<img src="imagens adivinhe imagem/2.png" width="740" height="500"/> ');
+                if (posicao == 3) document.write('<img src="imagens adivinhe imagem/3.png" width="740" height="500"/> ');
+                if (posicao == 4) document.write('<img src="imagens adivinhe imagem/4.png" width="740" height="500"/> ');
+                if (posicao == 5) document.write('<img src="imagens adivinhe imagem/5.png" width="740" height="500"/> ');
+                if (posicao == 6) document.write('<img src="imagens adivinhe imagem/6.png" width="740" height="500"/> ');
+                if (posicao == 7) document.write('<img src="imagens adivinhe imagem/7.png" width="740" height="500"/> ');
+                if (posicao == 8) document.write('<img src="imagens adivinhe imagem/8.png" width="740" height="500"/> ');
+                if (posicao == 9) document.write('<img src="imagens adivinhe imagem/9.png" width="740" height="500"/> ');
+                if (posicao == 10) document.write('<img src="imagens adivinhe imagem/10.png" width="740" height="500"/> ');
+                if (posicao == 11) document.write('<img src="imagens adivinhe imagem/11.png" width="740" height="500"/> ');
+                if (posicao == 12) document.write('<img src="imagens adivinhe imagem/12.png" width="740" height="500"/> ');
+                if (posicao == 13) document.write('<img src="imagens adivinhe imagem/13.png" width="740" height="500"/> ');
+                if (posicao == 14) document.write('<img src="imagens adivinhe imagem/14.png" width="740" height="500"/> ');
+                if (posicao == 15) document.write('<img src="imagens adivinhe imagem/15.png" width="740" height="500"/> ');
+                document.write('<br /></br />');
+                document.write('<br /><br /><a href=""><h3>Tentar Novamente!!!</h3></a>');
+
+                document.write('</center> </div>');
+
+            } else alert('Você não escolheu nenhuma carta');
+        }
+    </script>
+</body>
+
+</html>
