@@ -22,7 +22,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #85aefa;
+    background-color: #065dff;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -31,7 +31,7 @@ main{
 .game-quiz-container{
     width: 40rem;
     height: 30rem;
-    background-color: #669afc;
+    background-color: #4989ff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,12 +125,12 @@ input[type=radio]:checked ~ .option {
     background: none;
     color: #fff;;
     font-weight: 600;
-    border: 2px solid gray;
+    border: 2px solid #156df0;;
     cursor: pointer;
     outline: none;
 }
 .next-button-container button:hover{
-    background-color: rgb(143, 93, 93);
+    background-color: #156df0;;
 }
 
 .modal-container{
@@ -203,7 +203,7 @@ input[type=radio]:checked ~ .option {
     border-radius: 20px;
 }
 .modal-button-container button:hover{
-    background-color: rgb(83, 82, 82);
+    background-color: #156df0;
 }
 
 @media(min-width : 300px) and (max-width : 350px){

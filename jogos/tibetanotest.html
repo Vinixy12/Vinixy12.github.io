@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Personalidade Tibetano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin: 20px;
+        }
+        .answer {
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Teste de Personalidade Tibetano</h1>
+
+    <div class="question">
+        <p>1. Qual é a sua atitude em relação à natureza?</p>
+        <select id="natureAttitude">
+            <option value="1">Amor e Respeito</option>
+            <option value="2">Indiferença</option>
+            <option value="3">Desprezo</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <p>2. Como você lida com o estresse?</p>
+        <select id="stressHandling">
+            <option value="1">Meditação e Relaxamento</option>
+            <option value="2">Distrações e Entretenimento</option>
+            <option value="3">Raiva e Irritação</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <p>3. Qual é a sua relação com os outros?</p>
+        <select id="relationship">
+            <option value="1">Amizade e Compaixão</option>
+            <option value="2">Indiferença</option>
+            <option value="3">Competição e Hostilidade</option>
+        </select>
+    </div>
+
+    <button onclick="analyzePersonalityTest()">Analisar</button>
+
+    <div class="answer" id="testResult"></div>
+
+    <script>
+        function analyzePersonalityTest() {
+            const natureAttitude = parseInt(document.getElementById('natureAttitude').value);
+            const stressHandling = parseInt(document.getElementById('stressHandling').value);
+            const relationship = parseInt(document.getElementById('relationship').value);
+
+            // Lógica simples de análise (apenas um exemplo)
+            let result = "Resultado: ";
+
+            const totalScore = natureAttitude + stressHandling + relationship;
+
+            if (totalScore <= 4) {
+                result += "Você possui uma personalidade equilibrada e harmoniosa." ;
+            } else if (totalScore <= 7) {
+                result += "Sua personalidade pode ser influenciada por estresse e tensão.";
+            } else {
+                result += "Você pode beneficiar de trabalhar na sua atitude e relacionamentos.";
+            }
+
+            document.getElementById('testResult').innerText = result;
+        }
+    </script>
+</body>
+</html>

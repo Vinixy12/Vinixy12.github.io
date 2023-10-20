@@ -1,0 +1,35 @@
+<script>
+    function analisartest() {
+        const animals = parseInt(document.getElementById('animals').value);
+        const colors = parseInt(document.getElementById('colors').value);
+
+        var yellow = String(document.getElementById('yellow').value);
+        var orange = String(document.getElementById('orange').value);
+        var red = String(document.getElementById('red').value);
+        var white = String(document.getElementById('white').value);
+        var green = String(document.getElementById('green').value);
+
+        var dog = String(document.getElementById('dog').value);
+        var cat = String(document.getElementById('cat').value);
+        var mouse = String(document.getElementById('mouse').value);
+        var coffee = String(document.getElementById('coffee').value);
+        var ocean = String(document.getElementById('ocean').value);
+
+
+        let result = "Resultado: ";
+
+        const totalScore = animals + colors;
+
+        if (totalScore <= 5) {
+            result += "Você possui uma personalidade equilibrada e harmoniosa. Podemos dizer também que " + dog + " diz respeito a sua própria personalidade, " + cat + " descreve melhor o seu par; já o termo " + mouse + " diz respeito a seus inimigos, enquanto " + coffee + " faz referência a como você ve seu crush em sua vida e " + ocean + " é como você enxerga sua própria vida. Além disso, " + yellow + " é alguém que você nunca esquecerá, " + orange + " é uma pessoa que você considera um verdadeiro amigo, já " + red + " é a pessoa que você ama verdadeiramente, enquanto " + white + " é sua alma gémea e " + green + " é a pessoa que estará presente até o fim da vida.";
+        } else if (totalScore <= 7) {
+            result += "Sua personalidade pode ser influenciada por estresse e tensão.  Podemos dizer também que " + dog + " diz respeito a sua própria personalidade, " + cat + " descreve melhor o seu par; já o termo " + mouse + " diz respeito a seus inimigos, enquanto " + coffee + " faz referência a como você ve seu crush em sua vida e " + ocean + " é como você enxerga sua própria vida. Além disso, " + yellow + " é alguém que você nunca esquecerá, " + orange + " é uma pessoa que você considera um verdadeiro amigo, já " + red + " é a pessoa que você ama verdadeiramente, enquanto " + white + " é sua alma gémea e " + green + " é a pessoa que estará presente até o fim da vida.";
+        } else {
+            result += "Você pode beneficiar-se de trabalhar na sua atitude e relacionamentos.  Podemos dizer também que " + dog + " diz respeito a sua própria personalidade, " + cat + " descreve melhor o seu par; já o termo " + mouse + " diz respeito a seus inimigos, enquanto " + coffee + " faz referência a como você ve seu crush em sua vida e " + ocean + " é como você enxerga sua própria vida. Além disso, " + yellow + " é alguém que você nunca esquecerá, " + orange + " é uma pessoa que você considera um verdadeiro amigo, já " + red + " é a pessoa que você ama verdadeiramente, enquanto " + white + " é sua alma gémea e " + green + " é a pessoa que estará presente até o fim da vida.";
+        }
+
+        document.getElementById('testResult').innerText = result;
+    }
+</script>
+
+<a href="../index.html" class="btn btn-dark btn-lg">Voltar</a>

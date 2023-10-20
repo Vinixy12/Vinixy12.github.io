@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Adivinhando o numero quê você pensou de 1 até 31 !!!!</title>
-    <link rel="shortcut icon" href="/../Menu de Jogos/imagem/logo.png" type="imagem/x-icon">
+    <link rel="shortcut icon" href="/../imagem/logo.png" type="imagem/x-icon">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <style>
@@ -35,25 +36,34 @@
 
         <br><br>
 
-        <img src="1ao31/carta1.png" />
+        <img src="1ao31/carta1.png" class="img-fluid"/>
+        <br>
         <INPUT TYPE="radio" NAME="op1" VALUE="Sim">Sim
         <INPUT TYPE="radio" NAME="op1" VALUE="Não" checked>Não<br /><br />
-        <img src="1ao31/carta2.png" />
+        <img src="1ao31/carta2.png" class="img-fluid"/>
+        <br>
         <INPUT TYPE="radio" NAME="op2" VALUE="Sim">Sim
         <INPUT TYPE="radio" NAME="op2" VALUE="Não" checked>Não<br /><br />
-        <img src="1ao31/carta3.png" />
+        <img src="1ao31/carta3.png" class="img-fluid"/>
+        <br>
         <INPUT TYPE="radio" NAME="op3" VALUE="Sim">Sim
         <INPUT TYPE="radio" NAME="op3" VALUE="Não" checked>Não<br /><br />
-        <img src="1ao31/carta4.png" />
+        <img src="1ao31/carta4.png" class="img-fluid"/>
+        <br>
         <INPUT TYPE="radio" NAME="op4" VALUE="Sim">Sim
         <INPUT TYPE="radio" NAME="op4" VALUE="Não" checked>Não<br /><br />
 
-        <img src="1ao31/carta5.png" />
+        <img src="1ao31/carta5.png" class="img-fluid"/>
+        <br>
         <INPUT TYPE="radio" NAME="op5" VALUE="Sim">Sim
         <INPUT TYPE="radio" NAME="op5" VALUE="Não" checked>Não<br /><br />
         <input type="button" name="verifica" value="Ver o Resultado" onclick="respostas()">
         <input type="reset" name="limpar" value="Limpar Respostas">
     </form>
+
+    <br><br><br>
+
+    <a href="../index.html" class="btn btn-dark btn-lg">Voltar</a>
 
 
     <script>
@@ -76,11 +86,10 @@
 
             if (acertos > 0) {
                 // alert('Acertos ='+acertos);
-                document.write('<div style="background-color: #4682B4">');
+                document.write('<div style="background-color: #4682B4" style = width = "100%"; height = "100%">');
                 document.write('<center><h2>O número que você pensou foi: ' + acertos + '</h2><br />');
 
-                document.write('<br /><br />');
-                document.write('<img src="adivinhador.jpg" width="300" height="300" /> ');
+                document.write('<br />');
                 document.write('<br /><br /><a href=""><h3>Tentar Novamente!!!</h3></a>');
 
                 document.write('</center> </div>');

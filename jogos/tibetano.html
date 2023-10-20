@@ -1,1 +1,229 @@
-<link rel="shortcut icon" href="/../Menu de Jogos/imagem/logo.png" type="imagem/x-icon">
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/../Menu de Jogos/imagem/logo.png" type="imagem/x-icon">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Teste de Tibetano</title>
+</head>
+
+<style>
+    body {
+        background-color: #85aefa;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    p{
+        color: white;
+        font-size: 20px;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    h, h1, h2, h3, h4, h5{
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    select{
+        margin: 10px 0;
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 3px;
+        background: #367cff4d;
+        color: rgba(255, 255, 255, 0.568);
+        box-shadow: 2px 2px 3px black;
+
+    }
+
+    h3{
+        font-size: 16px;
+
+    }
+
+    input{
+        border: 1px solid black;
+        border-radius: 3px; 
+        background: #85aefa;
+        box-shadow: 2px 2px 3px black;
+
+    }
+
+    button{
+        margin: 20px 0;
+        padding: 5px;
+        border: #00000000;
+        border-radius: 3px; 
+        background: #2488fa;
+        color: #125ac5;
+        font-weight: bold;
+        font-size: 16px;
+
+    }
+
+    #voltar{
+        font-weight: bold;
+        text-decoration: none;
+        color: #125ac5;
+        font-size: 16px;
+
+    }
+
+</style>
+
+<h1>Teste de Tibetano</h1>
+
+<p>1. Coloque os animais na ordem que faz você se sentir feliz.</p>
+
+<div>
+    <select name="q1" id="q1" onchange="disableitem();">
+        <option selected="" value="0" disabled="">Escolha o 1º animal</option>
+        <option value="a carreira">Vaca</option>
+        <option value="o orgulho">Tigre</option>
+        <option value="o amor">Ovelha</option>
+        <option value="a família">Cavalo</option>
+        <option value="o dinheiro">Porco</option>
+    </select>
+</div>
+<div>
+    <select name="q2" id="q2" onchange="disableitem();">
+        <option selected="" value="0" disabled="">Escolha o 2º animal</option>
+        <option value="a carreira">Vaca</option>
+        <option value="o orgulho">Tigre</option>
+        <option value="o amor">Ovelha</option>
+        <option value="a família">Cavalo</option>
+        <option value="o dinheiro">Porco</option>
+    </select>
+</div>
+<div>
+    <select name="q3" id="q3" onchange="disableitem();">
+        <option selected="" value="0" disabled="">Escolha o 3º animal</option>
+        <option value="a carreira">Vaca</option>
+        <option value="o orgulho">Tigre</option>
+        <option value="o amor">Ovelha</option>
+        <option value="a família">Cavalo</option>
+        <option value="o dinheiro">Porco</option>
+    </select>
+</div>
+<div>
+    <select name="q4" id="q4" onchange="disableitem();">
+        <option selected="" value="0" disabled="">Escolha o 4º animal</option>
+        <option value="a carreira">Vaca</option>
+        <option value="o orgulho">Tigre</option>
+        <option value="o amor">Ovelha</option>
+        <option value="a família">Cavalo</option>
+        <option value="o dinheiro">Porco</option>
+    </select>
+</div>
+<div>
+    <select name="q5" id="q5" onchange="disableitem();">
+        <option selected="" value="0" disabled="">Escolha o 5º animal</option>
+        <option value="a carreira">Vaca</option>
+        <option value="o orgulho">Tigre</option>
+        <option value="o amor">Ovelha</option>
+        <option value="a família">Cavalo</option>
+        <option value="o dinheiro">Porco</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>2. Escolha um dos três animais</p>
+    <select id="animals">
+        <option value="1">Cachorro</option>
+        <option value="2">Porco</option>
+        <option value="3">Tigre</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>3. Qual é sua cor favorita dentre as 6 opcões</p>
+    <select id="colors">
+        <option value="1">Branco</option>
+        <option value="2">Azul</option>
+        <option value="3">Verde</option>
+        <option value="4">Amarelo</option>
+        <option value="5">Vermelho</option>
+        <option value="6">Preto</option>
+    </select>
+</div>
+
+<div>
+    <p>4. Escreva uma palavra (adjetivo) que descreva as seguintes palavras:</p>
+
+    <h3>Cachorro: <input type="text" id="dog"></h3>
+    <h3>Gato: <input type="text" id="cat"></h3>
+    <h3>Rato: <input type="text" id="mouse"></h3>
+    <h3>Café: <input type="text" id="coffee"></h3>
+    <h3>Mar: <input type="text" id="ocean"></h3>
+
+</div>
+
+<br><br>
+
+<div>
+    <p>5. Digite o nome de um amigo ou parente que se relaciona com as seguintes cores. Não repita os nomes.</p>
+
+    <h3>Amarelo: <input type="text" id="yellow"></h3>
+    <h3>Laranja: <input type="text" id="orange"></h3>
+    <h3>Vermelho: <input type="text" id="red"></h3>
+    <h3>Branco: <input type="text" id="white"></h3>
+    <h3>Verde: <input type="text" id="green"></h3>
+
+</div>
+
+<button onclick="analisartest()">Analisar</button>
+
+<div class="answer" id="testResult"></div>
+
+<script>
+    function analisartest() {
+        const animals = parseInt(document.getElementById('animals').value);
+        const colors = parseInt(document.getElementById('colors').value);
+
+        var q1 = String(document.getElementById('q1'). value);
+        var q2 = String(document.getElementById('q2'). value);
+        var q3 = String(document.getElementById('q3'). value);
+        var q4 = String(document.getElementById('q4'). value);
+        var q5 = String(document.getElementById('q5'). value);
+
+        var yellow = String(document.getElementById('yellow').value);
+        var orange = String(document.getElementById('orange').value);
+        var red = String(document.getElementById('red').value);
+        var white = String(document.getElementById('white').value);
+        var green = String(document.getElementById('green').value);
+
+        var dog = String(document.getElementById('dog').value);
+        var cat = String(document.getElementById('cat').value);
+        var mouse = String(document.getElementById('mouse').value);
+        var coffee = String(document.getElementById('coffee').value);
+        var ocean = String(document.getElementById('ocean').value);
+
+
+        let result = "Resultado: ";
+
+        const totalScore = animals + colors;
+
+        if (totalScore <= 5) {
+            result += "Você possui uma personalidade equilibrada e harmoniosa. Na sua vida você prioriza, em primeiro lugar " + q1 + ", em segundo lugar " + q2 + " e em seguida " +  q3 + ", " + q4 + " e em último lugar " + q5 + ". É nesta ordem que você tem priorizado as coisas em sua vida. Podemos dizer também que " + dog + " diz respeito a sua própria personalidade, " + cat + " descreve melhor o seu par; já o termo " + mouse + " diz respeito a seus inimigos, enquanto " + coffee + " faz referência a como você ve seu crush em sua vida e " + ocean + " é como você enxerga sua própria vida. Além disso, " + yellow + " é alguém que você nunca esquecerá, " + orange + " é uma pessoa que você considera um verdadeiro amigo, já " + red + " é a pessoa que você ama verdadeiramente, enquanto " + white + " é sua alma gémea e " + green + " é a pessoa que estará presente até o fim da vida.";
+        } else if (totalScore <= 7) {
+            result += "Sua personalidade pode ser influenciada por estresse e tensão. Na sua vida você prioriza, em primeiro lugar " + q1 + ", em segundo lugar " + q2 + " e em seguida " +  q3 + ", " + q4 + " e em último lugar " + q5 + ". É nesta ordem que você tem priorizado as coisas em sua vida. Podemos dizer também que " + dog + " diz respeito a sua própria personalidade, " + cat + " descreve melhor o seu par; já o termo " + mouse + " diz respeito a seus inimigos, enquanto " + coffee + " faz referência a como você ve seu crush em sua vida e " + ocean + " é como você enxerga sua própria vida. Além disso, " + yellow + " é alguém que você nunca esquecerá, " + orange + " é uma pessoa que você considera um verdadeiro amigo, já " + red + " é a pessoa que você ama verdadeiramente, enquanto " + white + " é sua alma gémea e " + green + " é a pessoa que estará presente até o fim da vida.";
+        } else {
+            result += "Você pode beneficiar-se de trabalhar na sua atitude e relacionamentos. Na sua vida você prioriza, em primeiro lugar " + q1 + ", em segundo lugar " + q2 + " e em seguida " +  q3 + ", " + q4 + " e em último lugar " + q5 + ". É nesta ordem que você tem priorizado as coisas em sua vida. Podemos dizer também que " + dog + " diz respeito a sua própria personalidade, " + cat + " descreve melhor o seu par; já o termo " + mouse + " diz respeito a seus inimigos, enquanto " + coffee + " faz referência a como você ve seu crush em sua vida e " + ocean + " é como você enxerga sua própria vida. Além disso, " + yellow + " é alguém que você nunca esquecerá, " + orange + " é uma pessoa que você considera um verdadeiro amigo, já " + red + " é a pessoa que você ama verdadeiramente, enquanto " + white + " é sua alma gémea e " + green + " é a pessoa que estará presente até o fim da vida.";
+        }
+
+        document.getElementById('testResult').innerText = result;
+    }
+
+</script>
+
+<br>
+
+<a href="../index.html" id="voltar" class="btn btn-dark btn-lg">Voltar</a>
+
+</body>
+
+</html>

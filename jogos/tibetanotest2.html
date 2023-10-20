@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Personalidade Tibetano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .question {
+            margin: 20px;
+        }
+
+        .answer {
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Teste de Personalidade Tibetano</h1>
+
+    <div class="question">
+        <p>1. Escolha um dos três animais</p>
+        <select id="animals">
+            <option value="1">Cachorro</option>
+            <option value="2">Porco</option>
+            <option value="3">Tigre</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <p>2. Qual é sua cor favorita dentre as 6 opcões</p>
+        <select id="colors">
+            <option value="1">Branco</option>
+            <option value="2">Azul</option>
+            <option value="3">Verde</option>
+            <option value="4">Amarelo</option>
+            <option value="5">Vermelho</option>
+            <option value="6">Preto</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <p>3. Escolha as opções que correspondem as pessoas que você possui laços.</p>
+        
+        <h3>Amarelo: <input type="text" id="yellow" value=""></h3>
+        <h3>Laranja: <input type="text" id="orange" value=""></h3>
+        <h3>Vermelho: <input type="text" id="red" value=""></h3>
+        <h3>Branco: <input type="text" id="white" value=""></h3>
+        <h3>Verde: <input type="text" id="green" value=""></h3>
+    </div>
+
+    </div>
+
+    <button onclick="analisartest()">Analisar</button>
+
+    <div class="answer" id="testResult"></div>
+
+    <script>
+        function analisartest() {
+            const animals = parseInt(document.getElementById('animals').value);
+            const colors = parseInt(document.getElementById('colors').value);
+            var yellow = String(document.getElementById('yellow').value);
+            var orange = String(document.getElementById('orange').value);
+            var red = String(document.getElementById('red').value);
+            var white = String(document.getElementById('white').value);
+            var green = String(document.getElementById('green').value);
+
+
+            let result = "Resultado: ";
+
+            const totalScore = animals + colors;
+
+            if (totalScore <= 5) {
+                result += "Você possui uma personalidade equilibrada e harmoniosa. Alem disso " + yellow + " é alguém que você nunca esquecerá, ";
+            } else if (totalScore <= 7) {
+                result += "Sua personalidade pode ser influenciada por estresse e tensão. Alem disso " + yellow + " é alguém que você nunca esquecerá, ";
+            } else {
+                result += "Você pode beneficiar de trabalhar na sua atitude e relacionamentos. Alem disso " + yellow + " é alguém que você nunca esquecerá, ";
+            }
+
+            document.getElementById('testResult').innerText = result;
+        }
+    </script>
+</body>
+
+</html>
